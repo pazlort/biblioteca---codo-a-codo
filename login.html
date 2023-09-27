@@ -4,44 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicie sesión en Bookbuster</title>
-    <link rel="icon" href="isotipo120x120.png">
-    <link rel="stylesheet" href="estilos1.css">
+    <link rel="shortcut icon" href="./img/logo.ico">
+    <title>Boockbuster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style/login.css">
+    <link rel="stylesheet" type="text/css" href="./style/menu.css">
+    <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav>
+        <div class="menu">
+            <div>
+                <a href="/index.html">
+                    <img src="./img/logo.jpg" alt="" class="img-brand">
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="./index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="./registro.html">REGISTRATE</a>
+                </li>
+                <li>
+                    <a href="./coleccion.html">CÁTALOGO</a>
+                </li>
+                <li>
+                    <a href="./prestamo.html">PRESTAMOS</a>
+                </li>
+                <li>
+                    <a href="./devolucion.html">DEVOLUCIONES</a>
+                </li>
+                <li>
+                    <a href="./contacto.html">CONTACTO</a>
+                </li>
+                <li>
+                    <a href="./login.html">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="bg-img">
+            <div class="content">
+                <header>Login Form</header>
+                <form action="#">
+                    <div class="field">
+                        <span class="fa fa-user"></span>
+                        <input type="text" required placeholder="Email or Phone">
+                    </div>
+                    <div class="field space">
+                        <span class="fa fa-lock"></span>
+                        <input type="password" class="password" required placeholder="Password">
 
-    <body>
-        <header>
-            <a href="https://bookbuster.com.ar" id="referrer" aria-label="Página de inicio de Bookbuster">
-                <img src="bbpaleta3.png" alt="Logotipo de Bookbuster">
-            </a>
-        </header>
-        <main>
-            <br>
-            <br>
-            <table align="center">
-                <td> <a href="loginbbuster.html" target="_self">Iniciar Sesión</td>
-                <td> | </td>
-                <td><a href="registerbbuster.html" target="_self">Crear Cuenta</td>
-            </table>
+                    </div>
+                    <div class="pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="field">
+                        <input type="submit" value="LOGIN">
+                    </div>
+                    <div class="signup">Don't have account?
+                        <a href="#">SignUp Now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer body-footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            <h1>Iniciar sesión no quiero</h1>
-            <form>
-                <label for="email">Correo electrónico</label>
-                <input class="fillbox" id="email" class="form-control1" name="username" value="" type="text"
-                    autofocus="" autocomplete="off" required="">
-                <br>
-                <label for="password">Contraseña</label>
-                <input class="fillbox" id="password" name="password" type="password" autocomplete="off" required="">
-                <br>
-                <br>
-                <a href="pwdresbbuster.html"><input class="boton-de-login" type="button"
-                        value="¿Olvidaste la contraseña?" name="pwdreset"></a>
-                <input class="boton-de-login" name="login" type="submit" value="Iniciar sesión">
-            </form>
-        </main>
-
-    </body>
+</body>
 
 </html>
