@@ -50,48 +50,52 @@
             </ul>
         </div>
     </nav>
-    <form>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="ID Libro" aria-label="ID Libro:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Titulo del libro" aria-label="Titulo del libro:">
-            </div>
-        </div>
-        <div class="row">
+    <main>
+        <br>
+        <br>
+        <table align="center">
+            <td> <a href="loginbbuster.html" target="_self">Iniciar Sesión</td>
+            <td> | </td>
+            <td><a href="registerbbuster.html" target="_self">Crear Cuenta</td>
+        </table>
+        <h1>
+            Registrarse
+        </h1>
+        <form>
+            <label for="email">Dirección de correo electrónico</label>
+            <input class="fillbox" type="email" id="email" name="email" value="" autocomplete="email" required=""
+                title="Campo Obligatorio">
+            <small>*</small>
+            <br>
+            <label for="username">Elija un nombre de usuario</label>
+            <input class="fillbox" type="text" id="username" name="username" value="" autocomplete="username"
+                title="Caracteres Alfanuméricos" required="">
+            <small>* - Es posible que su nombre de usuario se muestre públicamente</small>
+            <br>
+            <label for="password">Crear contraseña</label>
+            <input class="fillbox" type="password" id="password" pattern=".{8,}" class="form-control" name="password"
+                autocomplete="new-password" required="" title="Campo Obligatorio">
+            <small>Mínimo 8 caracteres</small>
+            <br>
+            <label for="password-confirm">Confirme la nueva contraseña</label>
+            <input class="fillbox" type="password" id="password-confirm" class="form-control" name="password-confirm"
+                autocomplete="new-password" required="" title="Campo Obligatorio">
+            <br>
+            <br>
+            <input type="checkbox" required="" id="user.attributes.ageconfirm" name="user.attributes.ageconfirm">
+            <label for="user.attributes.ageconfirm" class="form-check-label">Confirmo que tengo al menos 13
+                años</label>
+            <br>
+            <input type="checkbox" required="" id="user.attributes.terms" name="user.attributes.terms">
+            <label for="user.attributes.terms">Confirmo que he leído y acepto las <a href="TOS.html"
+                    target="_blank">Condiciones de uso</a> y <a href="privacy.html" target="_blank">Política de
+                    privacidad</a></label>
+            <br>
+            <br>
+            <input class="boton-de-login" type="submit" value="Registrarse">
 
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Autor" aria-label="Autor:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="ISBN" aria-label="ISBN:">
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Editorial" aria-label="Editorial:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="DNI" aria-label="DNI:">
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Fecha" aria-label="Fecha:">
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Ejemplo de textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-    </form>
+        </form>
+    </main>
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
