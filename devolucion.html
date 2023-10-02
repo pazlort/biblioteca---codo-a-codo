@@ -22,7 +22,12 @@
         <div class="menu">
             <div>
                 <a href="/index.html">
-                    <img src="./img/logo.jpg" alt="" class="img-brand">
+                    <picture class="img-brand">
+                        <source media="(max-width: 1280px)" 
+                                srcset="./img/logo_mobile.svg"
+                                class="img-brand">
+                        <img src="./img/logo_desktop.svg" alt="" class="img-brand">
+                    </picture>
                 </a>
             </div>
             <ul>

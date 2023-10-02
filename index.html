@@ -11,6 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap"
         rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
@@ -22,7 +27,12 @@
         <div class="menu">
             <div>
                 <a href="/index.html">
-                    <img src="./img/bookbuster_logotipe.svg" alt="" class="img-brand">
+                    <picture class="img-brand">
+                        <source media="(max-width: 1280px)" 
+                                srcset="./img/logo_mobile.svg"
+                                class="img-brand">
+                        <img src="./img/logo_desktop.svg" alt="" class="img-brand">
+                    </picture>
                 </a>
             </div>
             <ul>
@@ -48,6 +58,9 @@
                     <a href="./login.html">LOGIN</a>
                 </li>
             </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
     <main>
@@ -99,7 +112,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Tiende en línea</h4>
+                    <h4>Tienda en línea</h4>
                     <ul>
                         <li><a href="#">Relojes</a></li>
                         <li><a href="#">Mochilas</a></li>
