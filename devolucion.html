@@ -18,41 +18,24 @@
 </head>
 
 <body>
-    <nav>
-        <div class="menu">
-            <div>
-                <a href="/index.html">
-                    <picture class="img-brand">
-                        <source media="(max-width: 1280px)" 
-                                srcset="./img/logo_mobile.svg"
-                                class="img-brand">
-                        <img src="./img/logo_desktop.svg" alt="" class="img-brand">
-                    </picture>
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="./index.html">INICIO</a>
-                </li>
-                <li>
-                    <a href="./registro.html">REGISTRATE</a>
-                </li>
-                <li>
-                    <a href="./coleccion.html">CÁTALOGO</a>
-                </li>
-                <li>
-                    <a href="./prestamo.html">PRESTAMOS</a>
-                </li>
-                <li>
-                    <a href="./devolucion.html">DEVOLUCIONES</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">CONTACTO</a>
-                </li>
-                <li>
-                    <a href="./login.html">LOGIN</a>
-                </li>
-            </ul>
+    <nav class="nav">
+        <a href="/index.html" class="nav__logo">
+            <picture>
+                <source media="(max-width: 1280px)" 
+                        srcset="./img/logo_mobile.svg">
+                <img src="./img/logo_desktop.svg" alt="">
+            </picture>
+        </a>
+        <ul class="nav__ul">
+            <li class="nav__li"><a href="./index.html">Incio</a></li>
+            <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
+            <li class="nav__li"><a href="./prestamo.html">Prestamos</a></li>
+            <li class="nav__li"><a href="./devolucion.html">Devoluciones</a></li>
+            <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav__buttons">
+            <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a>
+            <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
         </div>
     </nav>
     <footer class="footer body-footer">

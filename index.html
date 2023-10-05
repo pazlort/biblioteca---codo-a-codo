@@ -5,17 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.ico">
-    <title>Boockbuster</title>
+    <title>Bookbuster</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap"
-        rel="stylesheet">
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap">
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
@@ -23,44 +16,24 @@
 </head>
 
 <body>
-    <nav>
-        <div class="menu">
-            <div>
-                <a href="/index.html">
-                    <picture class="img-brand">
-                        <source media="(max-width: 1280px)" 
-                                srcset="./img/logo_mobile.svg"
-                                class="img-brand">
-                        <img src="./img/logo_desktop.svg" alt="" class="img-brand">
-                    </picture>
-                </a>
-            </div>
-            <ul>
-                <li>
-                    <a href="./index.html">INICIO</a>
-                </li>
-                <li>
-                    <a href="./registro.html">REGISTRATE</a>
-                </li>
-                <li>
-                    <a href="./coleccion.html">CÁTALOGO</a>
-                </li>
-                <li>
-                    <a href="./prestamo.html">PRESTAMOS</a>
-                </li>
-                <li>
-                    <a href="./devolucion.html">DEVOLUCIONES</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">CONTACTO</a>
-                </li>
-                <li>
-                    <a href="./login.html">LOGIN</a>
-                </li>
-            </ul>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+    <nav class="nav">
+        <a href="/index.html" class="nav__logo">
+            <picture>
+                <source media="(max-width: 1280px)" 
+                        srcset="./img/logo_mobile.svg">
+                <img src="./img/logo_desktop.svg" alt="">
+            </picture>
+        </a>
+        <ul class="nav__ul">
+            <li class="nav__li"><a href="./index.html">Incio</a></li>
+            <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
+            <li class="nav__li"><a href="./prestamo.html">Prestamos</a></li>
+            <li class="nav__li"><a href="./devolucion.html">Devoluciones</a></li>
+            <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav__buttons">
+            <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a>
+            <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
         </div>
     </nav>
     <main>

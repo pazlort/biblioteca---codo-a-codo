@@ -3,65 +3,64 @@
   background: #ADC9E9;
 }
 
-nav{
+.nav{
   position: fixed;
-  background: #2F4A6A;
   width: 100%;
-  padding: 10px 0;
-  z-index: 2;
-}
-
-nav .menu{
-  max-width: 1250px;
-  margin: auto;
+  top: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  padding-left: 5px;
+  background-color: #2F4A6A;
+  padding: 0px 15px; /* Tamaño de la caja*/
+  transition: all .50s ease;
 }
-nav .toggle_btn{
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-.img-brand {
-  width: 40%;
+.nav__logo {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Ajusta el espaciado según tus preferencias */
 }
 
-.menu ul{
-  display: inline-flex;
+.nav__ul{
+  display: flex;
+  list-style-type: none;
 }
 
-.menu ul li{
-  list-style: none;
-  margin-left: 7px;
-}
-
-.menu ul li:first-child{
-  margin-left: 0px;
-}
-
-.menu ul li a{
+.nav__ul a{
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.1rem;
   font-weight: 500;
-  padding: 8px 5px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  padding: 5px 0;
+  margin: 0px 20px;
+  transition: all.50s ease;
 }
 
-.menu ul li a:hover{
-  background: #ADC9E9;
-  color: #2F4A6A;
+.nav__ul a:hover{
+  color: #bbb
 }
 
-/* Responsive Design*/
-@media(max-width: 1280px){
-  .img-brand {
-    width: 25%;
-  }
+.nav__buttons{
+  display: flex;
+  align-items: center;
+}
+
+.nav__buttons a{
+  text-decoration: none;
+  margin-right: 20px;
+  border: 2px solid #fff;
+  padding: 5px 0px;
+  width: 155px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.nav__buttons a:hover{
+  color: #bbb;
+  border-color: #bbb;
 }
