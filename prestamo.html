@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./style/prestamo.css">
     <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -38,49 +39,62 @@
             <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
             <i class="fas fa-bars" id="menu-icon"></i>
         </div>
-    </nav>
-    <form>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="ID Libro" aria-label="ID Libro:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Titulo del libro" aria-label="Titulo del libro:">
-            </div>
-        </div>
-        <div class="row">
+    </nav><br><br>
 
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Autor" aria-label="Autor:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="ISBN" aria-label="ISBN:">
-            </div>
+    <div class="wrapper">
+        <div class="inner">
+            <form action="">
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>Nombre y apellido</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>DNI</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>ID Libro</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>Titulo del libro</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span for="">Autor</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>ISBN</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control"  required>
+                    <span>Editorial</span>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group">
+                    <input type="date" class="form-control"  required>
+                    <span class="border"></span>
+                </label>
+                <label class="form-group" >
+                    <textarea name="" id="" class="form-control" required></textarea>
+                    <span for="">Comentario</span>
+                    <span class="border"></span>
+                </label>
+                <button>Submit 
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </button>
+            </form>
         </div>
-        <div class="row">
+    </div>
 
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Editorial" aria-label="Editorial:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="DNI" aria-label="DNI:">
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido:">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Fecha" aria-label="Fecha:">
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Ejemplo de textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-    </form>
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">

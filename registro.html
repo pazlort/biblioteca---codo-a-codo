@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./style/registro.css">
     <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,50 +41,64 @@
         </div>
     </nav>
     <main>
-        <br>
-        <br>
-        <table align="center">
-            <td> <a href="loginbbuster.html" target="_self">Iniciar Sesión</td>
-            <td> | </td>
-            <td><a href="registerbbuster.html" target="_self">Crear Cuenta</td>
-        </table>
-        <h1>
-            Registrarse
-        </h1>
-        <form>
-            <label for="email">Dirección de correo electrónico</label>
-            <input class="fillbox" type="email" id="email" name="email" value="" autocomplete="email" required=""
-                title="Campo Obligatorio">
-            <small>*</small>
-            <br>
-            <label for="username">Elija un nombre de usuario</label>
-            <input class="fillbox" type="text" id="username" name="username" value="" autocomplete="username"
-                title="Caracteres Alfanuméricos" required="">
-            <small>* - Es posible que su nombre de usuario se muestre públicamente</small>
-            <br>
-            <label for="password">Crear contraseña</label>
-            <input class="fillbox" type="password" id="password" pattern=".{8,}" class="form-control" name="password"
-                autocomplete="new-password" required="" title="Campo Obligatorio">
-            <small>Mínimo 8 caracteres</small>
-            <br>
-            <label for="password-confirm">Confirme la nueva contraseña</label>
-            <input class="fillbox" type="password" id="password-confirm" class="form-control" name="password-confirm"
-                autocomplete="new-password" required="" title="Campo Obligatorio">
-            <br>
-            <br>
-            <input type="checkbox" required="" id="user.attributes.ageconfirm" name="user.attributes.ageconfirm">
-            <label for="user.attributes.ageconfirm" class="form-check-label">Confirmo que tengo al menos 13
-                años</label>
-            <br>
-            <input type="checkbox" required="" id="user.attributes.terms" name="user.attributes.terms">
-            <label for="user.attributes.terms">Confirmo que he leído y acepto las <a href="TOS.html"
-                    target="_blank">Condiciones de uso</a> y <a href="privacy.html" target="_blank">Política de
-                    privacidad</a></label>
-            <br>
-            <br>
-            <input class="boton-de-login" type="submit" value="Registrarse">
+        <div class="wrapper">
+            <form action="" id="wizard">
+        		<!-- SECTION 1 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+						<div class="image-holder">
+							<img src="biblioteca---codo-a-codo\img\IMAGENES\istockphoto-1220125729-612x612.jpg" alt="">
+						</div>
+						<div class="form-content" >
+							<div class="form-header">
+								<h3>Registrarte</h3>
+                                <p>Es fácil y rápido</p>
+							</div><br>
+							<p>Por favor complete con sus datos</p>
+							<div class="form-row">
+								<div class="form-holder">
+									<input type="text" placeholder="Nombre" class="form-control" required>
+								</div>
+								<div class="form-holder">
+									<input type="text" placeholder="Apellido" class="form-control" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-holder">
+									<input type="text" placeholder="Correo electronico" class="form-control" required>
+								</div>
+								<div class="form-holder">
+									<input type="text" placeholder="Telefono" class="form-control">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-holder">
+									<input type="text" placeholder="Edad" class="form-control" required>
+								</div>
+								<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+									<div class="checkbox-tick">
+										<label class="male">
+											<input type="radio" name="genero" value="male" checked> Masculino<br>
+											<span class="checkmark"></span>
+										</label>
+										<label class="female">
+											<input type="radio" name="genero" value="female"> Femenino<br>
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="checkbox-circle">
+								<label>
+									<input type="checkbox" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+                </section>
 
-        </form>
     </main>
     <footer class="footer body-footer">
         <div class="footer-container">
