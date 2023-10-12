@@ -49,8 +49,8 @@ a:hover {
 .inner {
   max-width: 758px;
   margin: auto;
-  background: #39459b;
-  border: 10px solid #0d99d7;
+  background: #2f4a6a;
+  border: 10px solid #8095ad;
   padding: 77px 99px 87px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -80,7 +80,7 @@ p {
   margin-bottom: 48px; }
   .form-group span {
     font-size: 15px;
-    color: #00ade6;
+    color: #fff;
     position: absolute;
     top: 11px;
     transition: all .2s ease;
@@ -99,7 +99,7 @@ p {
 
 .form-control {
   border: none;
-  border-bottom: 2px solid #00ade6;
+  border-bottom: 2px solid #8095ad;
   display: block;
   width: 100%;
   height: 43px;
@@ -195,6 +195,6 @@ button {
     -ms-box-shadow: none;
     -o-box-shadow: none; }
 
-  .wrapper {
-    background: #39459b;
-    border: 10px solid #0d99d7; } }
+    .wrapper {
+      background: #2f4a6a;
+      border: 10px solid #8095ad; } }
