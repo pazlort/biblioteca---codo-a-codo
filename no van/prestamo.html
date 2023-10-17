@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./style/prestamo.css">
     <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,24 +22,79 @@
     <nav class="nav">
         <a href="/index.html" class="nav__logo">
             <picture>
-                <source media="(max-width: 1280px)" 
-                        srcset="./img/logo_mobile.svg">
+                <source media="(max-width: 1280px)" srcset="./img/logo_mobile.svg">
                 <img src="./img/logo_desktop.svg" alt="">
             </picture>
         </a>
         <ul class="nav__ul">
-            <li class="nav__li"><a href="./index.html">Incio</a></li>
+            <li class="nav__li"><a href="./index.html">inicio</a></li>
             <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
             <li class="nav__li"><a href="./prestamo.html">Prestamos</a></li>
             <li class="nav__li"><a href="./devolucion.html">Devoluciones</a></li>
             <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
         </ul>
         <div class="nav__buttons">
-            <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a>
+            <!-- <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a> -->
             <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
             <i class="fas fa-bars" id="menu-icon"></i>
         </div>
     </nav>
+    <main>
+        <div class="wrapper">
+            <div class="inner">
+                <form action="">
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>Nombre y apellido</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>DNI</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>ID Libro</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>Titulo del libro</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span for="">Autor</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>ISBN</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="text" class="form-control" required>
+                        <span>Editorial</span>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <input type="date" class="form-control" required>
+                        <span class="border"></span>
+                    </label>
+                    <label class="form-group">
+                        <textarea name="" id="" class="form-control" required></textarea>
+                        <span for="">Comentario</span>
+                        <span class="border"></span>
+                    </label>
+                    <button>Enviar
+                        <i class="zmdi zmdi-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
