@@ -28,8 +28,6 @@
         <ul class="nav__ul">
             <li class="nav__li"><a href="./index.html">Inicio</a></li>
             <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
-            <li class="nav__li"><a href="./prestamo.html">Prestamos</a></li>
-            <li class="nav__li"><a href="./devolucion.html">Devoluciones</a></li>
             <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
         </ul>
         <div class="nav__buttons">
@@ -48,22 +46,7 @@
         </div>
 
         <script>
-            var contenido = document.querySelector('#contenido');
 
-            function traer() {
-                fetch('https://openlibrary.org/search.json?author=tolkien&sort=new')
-
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data.docs[0])
-                        //console.log(data.results)
-                        // console.log(data.results[0].email)
-                        // contenido.innerHTML =
-                        // `<img src="${data.results[0].picture.large}" width="100px" class="img-fluid rounded-circle">
-                        // <p>Nombre: ${data.results[0].name.first}</p>
-                        // `
-                    })
-            }
         </script>
     </body>
     <footer class="footer body-footer">
@@ -110,6 +93,8 @@
         </div>
     </footer>
     <script src="code/script.js"></script>
+    <script src="code/api.js"></script>
+
 </body>
 
 </html>
