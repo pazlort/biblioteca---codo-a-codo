@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
+    <link rel="stylesheet" type="text/css" href="./style/card.css">
     <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -37,19 +38,25 @@
         </div>
     </nav>
 
-    <body>
+    <header id="app">
         <h1>Hello, world!</h1>
-        <div class="container my-5 text-center">
-            <button class="btn btn-danger w-100" onclick="traer()">Obtener</button>
-            <div class="mt-5" id="contenido">
-            </div>
+        <div id="busquedaDeLibros">
+            <input class="search-input" placeholder="Busque por autor, titulo,...." type="text" name="search"
+                v-model="nombreDeBusqueda">
+            <button @click="buscarLibros" class="icon-search"></button>
         </div>
-
-        <script>
-
-        </script>
-    </body>
-    <footer class="footer body-footer">
+        <div class="card" v-for="i in librosEncontrados">
+            <img :src="i.imagen" class="card-img" alt="">
+            <h3 class="card-title"> {{i.nombre}}</h3>
+            <p>
+                Autor: {{i.autor}} <br>
+                Año Primer Publicacion: {{i.anioPrimerPublicacion}}<br>
+                ISBN: {{i.isbn}}<br>
+                Editorial: {{i.editorial}}<br>
+            </p>
+        </div>
+    </header>
+    <footer class=" footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
@@ -92,9 +99,9 @@
             </div>
         </div>
     </footer>
-    <script src="code/script.js"></script>
-    <script src="code/api.js"></script>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./code/api.js"></script>
+    <script src="./code/menu.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,39 +15,35 @@
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
     <script src="https://kit.fontawesome.com/65cbcbf755.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <a href="/index.html" class="nav__logo">
-                <picture>
-                    <source media="(max-width: 1280px)" srcset="./img/logo_mobile.svg">
-                    <img src="./img/logo_desktop.svg" alt="">
-                </picture>
-            </a>
-            <ul class="nav__ul">
-                <li class="nav__li"><a href="./index.html">Inicio</a></li>
-                <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
-                <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <div class="nav__buttons">
-                <!-- <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a> -->
-                <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
-                <i class="fas fa-bars" id="menu-icon"></i>
-            </div>
-        </nav>
-    </header>
+    <nav class="nav">
+        <a href="/index.html" class="nav__logo">
+            <picture>
+                <source media="(max-width: 1280px)" srcset="./img/logo_mobile.svg">
+                <img src="./img/logo_desktop.svg" alt="">
+            </picture>
+        </a>
+        <ul class="nav__ul">
+            <li class="nav__li"><a href="./index.html">Inicio</a></li>
+            <li class="nav__li"><a href="./coleccion.html">Cátalogo</a></li>
+            <li class="nav__li"><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav__buttons">
+            <!-- <a href="./login.html" class="nav__buttons-sing-in">Iniciar Sesión</a> -->
+            <a href="./registro.html" class="nav__buttons-register">Registrarse</a>
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+    </nav>
     <main>
         <div class="img-principal">
             <div class="center">
                 <div class="title">Descrubre nuestra colección</div>
                 <div class="title">con los mejores libros</div>
-                <form>
-                    <input class="search-input" placeholder="Busque por autor, titulo,...." type="text" name="search">
-                    <button type="submit" class="icon-search"></button>
-                </form>
             </div>
+        </div>
         </div>
         <h1>Explora por categorias</h1>
         <div class=" div-contenedor container">
@@ -106,7 +103,8 @@
             </div>
         </div>
     </footer>
-    <script src="code/script.js"></script>
+    <script src="./code/menu.js"></script>
+
 </body>
 
 </html>
