@@ -33,8 +33,6 @@ createApp({
                             }
                             this.librosEncontrados.push(this.libro)
                         }
-                        console.log(this.librosEncontrados);
-
                     }
                 })
         },

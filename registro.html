@@ -42,91 +42,82 @@
             <form action="" id="wizard">
                 <!-- SECTION 1 -->
                 <h2></h2>
-                    <div class="inner">
-                        <div class="image-holder">
-                            <img src="./img/IMAGENES/books-485479_1280.jpg" alt="">
+                <div class="inner">
+                    <div class="image-holder">
+                        <img src="./img/IMAGENES/books-485479_1280.jpg" alt="">
+                    </div>
+                    <div class="form-content">
+                        <div class="form-header">
+                            <h3>Registrarte</h3>
+                            <p>Es fácil y rápido</p>
+                        </div><br>
+                        <p>Por favor complete con sus datos</p>
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="text" placeholder="Nombre" class="form-control" required>
+                            </div>
+                            <div class="form-holder">
+                                <input type="text" placeholder="Apellido" class="form-control" required>
+                            </div>
                         </div>
-                        <div class="form-content">
-                            <div class="form-header">
-                                <h3>Registrarte</h3>
-                                <p>Es fácil y rápido</p>
-							</div><br>
-							<p>Por favor complete con sus datos</p>
-							<div class="form-row">
-								<div class="form-holder">
-									<input type="text" placeholder="Nombre" class="form-control" required>
-								</div>
-								<div class="form-holder">
-									<input type="text" placeholder="Apellido" class="form-control" required>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-holder">
-									<input type="text" placeholder="Correo electronico" class="form-control" required>
-								</div>
-								<div class="form-holder">
-									<input type="text" placeholder="Telefono" class="form-control">
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-holder">
-									<input type="text" placeholder="Edad" class="form-control" required>
-								</div>
-								<div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
-									<div class="checkbox-tick">
-										<label class="male">
-											<input type="radio" name="genero" value="male" checked> Masculino<br>
-											<span class="checkmark"></span>
-										</label>
-										<label class="female">
-											<input type="radio" name="genero" value="female"> Femenino<br>
-											<span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="checkbox-circle">
-								<label> 
-									<input type="checkbox" checked> Acepto los terminos y condiciones.
-									<span class="checkmark"></span>
-								</label>
-							</div>
-						</div>
-					</div>
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="text" placeholder="Correo electronico" class="form-control" required>
+                            </div>
+                            <div class="form-holder">
+                                <input type="text" placeholder="Telefono" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-holder">
+                                <input type="text" placeholder="Edad" class="form-control" required>
+                            </div>
+                            <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                                <div class="checkbox-tick">
+                                    <label class="male">
+                                        <input type="radio" name="genero" value="male" checked> Masculino<br>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="female">
+                                        <input type="radio" name="genero" value="female"> Femenino<br>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-circle">
+                            <label>
+                                <input type="checkbox" checked> Acepto los terminos y condiciones.
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
     </main>
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Bookbuster</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>get help</h4>
+                    <h4>¿Necesitas Ayuda?</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="/faqs.html">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>online shop</h4>
+                    <h4>Información Importante</h4>
                     <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="/tos.html">Términos y Condiciones</a></li>
+
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
+                <div align="left" class="footer-col">
+                    <h4>Nuestras Redes Sociales</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -137,7 +128,7 @@
             </div>
         </div>
     </footer>
+    <script src="./code/menu.js"></script>
 </body>
-<script src="./code/menu.js"></script>
 
 </html>

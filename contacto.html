@@ -39,66 +39,70 @@
     </nav>
 
     <main>
-        <div class="inner">
-            <form action="">
+        <div class="inner" id="app">
+            <form>
                 <h3>contacto</h3>
-                <p>Si necesitas contactarnos para hacer alguna consulta o simplemente para dejar tu comentario, por
-                    favor sentite libre de hacerlo.</p>
                 <label class="form-group">
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" v-model="nombreContacto">
                     <span>Nombre y apellido</span>
                     <span class="border"></span>
                 </label>
                 <label class="form-group">
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" v-model="email">
                     <span for="">Correo electronico</span>
                     <span class="border"></span>
                 </label>
                 <label class="form-group">
-                    <textarea name="" id="" class="form-control" required></textarea>
+                    <textarea class="form-control" v-model="comentario"></textarea>
                     <span for="">Dejanos tu mesaje</span>
                     <span class="border"></span>
                 </label>
-                <button>Consultar
-                    <i class="zmdi zmdi-arrow-right"></i>
-                </button>
             </form>
+            <button @click="validarTodo">Consultar</button>
         </div>
+        </div>
+        <br><br><br>
+        <div align="center">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.7154667572406!2d-58.507668128556915!3d-34.567961112996144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6fde0078507%3A0x1766d6ab498dab7e!2sBiblioteca%20Brigadier%20Gral.%20Cornelio%20Saavedra!5e0!3m2!1ses-419!2sar!4v1697738455755!5m2!1ses-419!2sar"
+                width="80%" height="225px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" marginwidth="100px" margin="0 auto">Dirección de la
+                Biblioteca</iframe>
+        </div>
+        <br>
+        <div>
+            <p class="transportes"><strong>Transportes Cercanos: </strong><br>
+                Líneas de colectivos: 21, 28, 110, 111, 117, 127, 140, 169, 176
+            </p>
+
+        </div>
+        <br><br><br>
     </main>
 
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Bookbuster</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="/nosotros.html">Sobre Nosotros</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>get help</h4>
+                    <h4>¿Necesitas Ayuda?</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="/faqs.html">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>online shop</h4>
+                    <h4>Información Importante</h4>
                     <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="/tos.html">Términos y Condiciones</a></li>
+
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
+                <div align="left" class="footer-col">
+                    <h4>Nuestras Redes Sociales</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -109,8 +113,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./code/menu.js"></script>
+    <script src="./code/validaciones.js"></script>
 </body>
-<script src="./code/menu.js"></script>
-
 
 </html>
