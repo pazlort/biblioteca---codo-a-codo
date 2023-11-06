@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.ico">
-    <title>Boockbuster</title>
+    <title>Bookbuster</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap">
     <link rel="stylesheet" type="text/css" href="./style/index.css">
     <link rel="stylesheet" type="text/css" href="./style/menu.css">
     <link rel="stylesheet" type="text/css" href="./style/footer.css">
-    <link rel="stylesheet" type="text/css" href="./style/card.css">
-    <script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/65cbcbf755.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <nav class="nav">
-        <a href="/index.html" class="nav__logo">
+        <a href="/index.html" class="img-fluid nav__logo">
             <picture>
                 <source media="(max-width: 1280px)" srcset="./img/logo_mobile.svg">
                 <img src="./img/logo_desktop.svg" alt="">
@@ -37,25 +37,29 @@
             <i class="fas fa-bars" id="menu-icon"></i>
         </div>
     </nav>
-
-    <header id="app">
-        <h1>Hello, world!</h1>
-        <div id="busquedaDeLibros">
-            <input class="search-input" placeholder="Busque por autor, titulo,...." type="text" name="search"
-                v-model="nombreDeBusqueda">
-            <button @click="buscarLibros" class="icon-search"></button>
+    <main>
+        <div class="img-principal">
+            <div class="center">
+                <div class="title">Descrubre nuestra colección</div>
+                <div class="title">con los mejores libros</div>
+            </div>
         </div>
-        <div class="card" v-for="i in librosEncontrados">
-            <img :src="i.imagen" class="card-img" alt="">
-            <h3 class="card-title"> {{i.nombre}}</h3>
-            <p>
-                Autor: {{i.autor}} <br>
-                Año Primer Publicacion: {{i.anioPrimerPublicacion}}<br>
-                ISBN: {{i.isbn}}<br>
-                Editorial: {{i.editorial}}<br>
-            </p>
         </div>
-    </header>
+        <h1>Explora por categorias</h1>
+        <div class=" div-contenedor container">
+            <div class="carousel">
+                <div class="carousel-face"><span>Paulo Coelho</span></div>
+                <div class="carousel-face"><span>El principito</span></div>
+                <div class="carousel-face"></div>
+                <div class="carousel-face"><span>El Señor de los Anillos</span></div>
+                <div class="carousel-face"><span>Sherlock Holmes</span></div>
+                <div class="carousel-face"><span>Dan Brown</span></div>
+                <div class="carousel-face"></div>
+                <div class="carousel-face"></div>
+                <div class="carousel-face"><span>Hush, hush</span></div>
+            </div>
+        </div>
+    </main>
     <footer class="footer body-footer">
         <div class="footer-container">
             <div class="footer-row">
@@ -75,7 +79,7 @@
                     <h4>Información Importante</h4>
                     <ul>
                         <li><a href="/tos.html">Términos y Condiciones</a></li>
-                        
+
                     </ul>
                 </div>
                 <div align="left" class="footer-col">
@@ -90,8 +94,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./code/api.js"></script>
     <script src="./code/menu.js"></script>
 </body>
 
