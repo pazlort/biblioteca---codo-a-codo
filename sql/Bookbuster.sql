@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS prestamos (
     delete_at TIMESTAMP NULL,
     delete_by_user INT NULL,
     state TINYINT(1),
-    FOREIGN KEY (usuario_id) REFERENCES prestamos(id)
+    FOREIGN KEY (id_user) REFERENCES prestamos(id_prestamo)
 ) ENGINE=InnoDB CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI;
 
 -- Trigger para actualizar update_at en usuarios
