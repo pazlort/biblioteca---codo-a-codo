@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<!-- basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- mobile metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="images/bookbuster-icono.png" type="image/x-icon">
+	<!-- site metas -->
+	<title>BOOKBUSTER</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Responsive-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- fevicon -->
+	<link rel="icon" href="images/fevicon.png" type="image/gif" />
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<!-- Tweaks for older IEs-->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	<!-- owl stylesheets -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+		media="screen">
+	<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b2c0a025e7.js" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesheet_form.css">
+
+</head>
+
+
+<body>
+	<!-- header section start -->
+	<div class="header_section">
+		<nav class="navbar fixed-top  navbar-expand-lg navbar-light bg-light">
+			<a class="logo" href="index.html"><img src="images/bookbuster-logo-blanco.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Préstamos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./catalogo-completo.html">Cátalogo completo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html#contacto">Contacto</a>
+					</li>
+				</ul>
+				<div class="search_icon"><a href="./index.html"><img src="images/user-icon.png">
+						<span class="padding_left_15">Volver al inicio</span></a></div>
+			</div>
+		</nav>
+	</div>
+	<br><br>
+    
+	<main>
+
+        <h2 style="color:#456E9D; font-weight:bold">Fomulario de préstamos</h2>
+		<form action="" class="formulario" id="formulario">
+
+
+			<!-- Grupo: firstname -->
+			<div class="formulario__grupo" id="grupo__id_user">
+				<label for="id_user" class="formulario__label">id user(nro. de socio):</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="id_user" id="ide_user" placeholder="Ingrese su nro. de socio. Por ejemplo: 1546">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
+			</div>
+
+
+			<!-- Grupo: cambiar en css de lastname -->
+			<div class="formulario__grupo" id="grupo__id_libro">
+				<label for="id_libro" class="formulario__label">id libro:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="id_libro" id="id_libro" placeholder="Ingrese el id del libro">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
+			</div>
+
+
+
+
+			<!-- Grupo: username -->
+			<div class="formulario__grupo" id="grupo__id_libro">
+				<label for="nombre_del_libro" class="formulario__label">Nombre del libro:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre_del_libro" id="nombre_del_libro" placeholder="Ingrese el nombre del libro">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo Usuario tiene que ser de 8 a 16 dígitos y sólo puede contener números, letras, guión medio
+					y guión bajo.</p>
+			</div>
+
+
+			<!-- Grupo: email -->
+			<div class="formulario__grupo" id="grupo__id_libro">
+				<label for="autor_libro" class="formulario__label">Autor:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="autor_libro" id="autor_libro" placeholder="Ingrese el autor del libro.">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo correo sólo puede contener letras, números, puntos, guión medio y guión bajo.</p>
+			</div>
+
+
+
+
+			<!-- Grupo: password -->
+			<div class="formulario__grupo" id="grupo__id_del_libro">
+				<label for="coleccion_libro" class="formulario__label">Colección:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="coleccion_libro" id="coleccion_libro" placeholder="Ingrese la colección del libro.">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				
+			</div>
+
+
+			<!-- Grupo: password2 -->
+			<div class="formulario__grupo" id="grupo__id_del_libro">
+				<label for="editorial_libro" class="formulario__label">Editorial:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="editorial_libro" id="editorial_libro" placeholder="Ingrese la colección del libro.">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				
+			</div>
+			<!-- Grupo: rol_id no va acá -->
+		
+
+            <div class="formulario__grupo" id="id_del_libro">
+				<label for="fecha_prestamo" class="formulario__label">Fecha desde:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="fecha_prestamo" id="fecha_prestamo" placeholder="Ingrese fecha de préstamo.">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
+			</div>
+            <div class="formulario__grupo" id="id_del_libro">
+				<label for="observaciones_libros" class="formulario__label">Observaciones:</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="observaciones_libros" id="observaciones_libros" placeholder="Ingrese alguna observación.">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">
+					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
+			</div>
+        
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Términos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor complete el formulario
+					correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El Formulario ha sido enviado
+					exitosamente!</p>
+			</div>
+		</form>
+	</main>
+	<!-- footer  section start -->
+	<div class="footer_section layout_padding">
+		<div class="container">
+			<div class="footer_menu">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="catalogo-completo.html">Catálogo completo</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+			</div>
+			<div class="social_icon">
+				<ul>
+					<li><a href="#"><img src="images/fb-icon.png"></a></li>
+					<li><a href="#"><img src="images/twitter-icon.png"></a></li>
+					<li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+					<li><a href="#"><img src="images/instagram-icon.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<a class="ir-arriba" javascript:void(0) title="Volver arriba">
+		<span class="fa-stack">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+	<!-- footer  section end -->
+
+
+	<script src="js/script_form.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
