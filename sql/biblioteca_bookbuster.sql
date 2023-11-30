@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS Bookbuster CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI; USE Bookbuster;
+CREATE DATABASE IF NOT EXISTS biblioteca_bookbuster CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI; USE biblioteca_bookbuster;
 
 -- Crear la tabla de usuarios
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -30,8 +30,9 @@ CREATE TABLE IF NOT EXISTS roles (
 -- Crear la tabla de libros
 CREATE TABLE IF NOT EXISTS libros (
     id_libro INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    titulo_libro VARCHAR(50) NOT NULL,
+    titulo_libro VARCHAR(100) NOT NULL,
     autor_libro VARCHAR(100) NOT NULL,
+    coleccion_libro VARCHAR(100) NOT NULL,
     editorial_libro VARCHAR(50) NOT NULL,
     url_img VARCHAR(100) NOT NULL,
     create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -54,7 +55,7 @@ CREATE TABLE IF NOT EXISTS prestamos (
     delete_at TIMESTAMP NULL,
     delete_by_user INT NULL,
     state TINYINT(1),
-    FOREIGN KEY (usuario_id) REFERENCES prestamos(id)
+    FOREIGN KEY (id_user) REFERENCES prestamos(id_prestamo)
 ) ENGINE=InnoDB CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI;
 
 -- Trigger para actualizar update_at en usuarios
@@ -155,13 +156,13 @@ INSERT INTO roles
     ('Usuario', NOW(), NULL, NULL, NULL, 1);
 
 INSERT INTO libros
-    (titulo_libro, autor_libro, editorial_libro, url_img, create_at, update_at, delete_at, delete_by_user, state)
+    (titulo_libro, autor_libro,coleccion_libro, editorial_libro, url_img, create_at, update_at, delete_at, delete_by_user, state)
     VALUES
-    ('titulo1', 'autor1', 'editorial1', '2020-01-01', NOW(), NULL, NULL, NULL, 1),
-    ('titulo2', 'autor2', 'editorial2', '2020-01-01', NOW(), NULL, NULL, NULL, 1),
-    ('titulo3', 'autor3', 'editorial3', '2020-01-01', NOW(), NULL, NULL, NULL, 1),
-    ('titulo4', 'autor4', 'editorial4', '2020-01-01', NOW(), NULL, NULL, NULL, 1),
-    ('titulo5', 'autor5', 'editorial5', '2020-01-01', NOW(), NULL, NULL, NULL, 1);
+    ('titulo1', 'autor1', 'coleccion1', 'editorial1', '/', NOW(), NULL, NULL, NULL, 1),
+    ('titulo2', 'autor2', 'coleccion2', 'editorial2', '/', NOW(), NULL, NULL, NULL, 1),
+    ('titulo3', 'autor3', 'coleccion3', 'editorial3', '/', NOW(), NULL, NULL, NULL, 1),
+    ('titulo4', 'autor4', 'coleccion4', 'editorial4', '/', NOW(), NULL, NULL, NULL, 1),
+    ('titulo5', 'autor5', 'coleccion4', 'editorial5', '/', NOW(), NULL, NULL, NULL, 1);
 
 INSERT INTO prestamos
     (id_user, id_libro, fecha_desde, fecha_hasta, observaciones, create_at, update_at, delete_at, delete_by_user, state)
