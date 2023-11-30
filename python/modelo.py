@@ -1,7 +1,7 @@
 import mysql.connector
 
 
-class DataBase:
+class Database:
     def __init__(self, host, user, password, database):
         self.conn = mysql.connector.connect(
             host=host, user=user, password=password, database=database, port=3307
@@ -24,7 +24,7 @@ class DataBase:
 class Catalogo:
     libros = []
 
-    def agregar_libros(
+    def agregar_libro(
         self,
         titulo_libro,
         autor_libro,
@@ -45,32 +45,17 @@ class Catalogo:
         return True
 
     def listar_libros(self):
-        print("-" * 30)
-        for libro in self.libros:
-            print(f"           Codigo: {libro['id_libro']}")
-            print(f"     titulo_libro: {libro['titulo_libro']}")
-            print(f"      autor_libro: {libro['autor_libro']}")
-            print(f"  coleccion_libro: {libro['coleccion_libro']}")
-            print(f"  editorial_libro: {libro['editorial_libro']}")
-            print("-" * 30)
+        db.cursor.execute("SELECT * FROM libros")
+        productos = db.cursor.fetchall()
+        return productos
 
-    def ver_libros(self, id_libro):
+    def ver_libro(self, id_libro):
         db.cursor.execute(f"SELECT * FROM libros WHERE id_libro = {id_libro}")
         resq = db.cursor.fetchone()
         if resq:
             return resq
         else:
             return False
-
-    def mostrar_libros(self, libro):
-        print("-" * 30)
-        print(f"          Codigo: {libro['id_libro']}")
-        print(f"    titulo_libro: {libro['titulo_libro']}")
-        print(f"     autor_libro: {libro['autor_libro']}")
-        print(f" coleccion_libro: {libro['coleccion_libro']}")
-        print(f" editorial_libro: {libro['editorial_libro']}")
-        print(f"         url_img: {libro['url_img']}")
-        print("-" * 30)
 
     def borrar_libros(self, id_libro):
         db.cursor.execute(f"DELETE FROM libros WHERE id_libro = {id_libro}")
@@ -100,4 +85,4 @@ class Catalogo:
         return db.cursor.rowcount > 0
 
 
-db = DataBase(host="localhost", user="root", password="", database="miapp")
+db = Database(host="localhost", user="root", password="", database="miapp")
