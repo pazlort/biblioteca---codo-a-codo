@@ -5,7 +5,8 @@ from modelo import Catalogo, Database
 
 app = Flask(__name__)
 CORS(app)
-db = Database(host="pazlort.mysql.pythonanywhere-services.com", user="pazlort", password="bookbuster", database="pazlort$bookbuster")
+# db = Database(host="pazlort.mysql.pythonanywhere-services.com", user="pazlort", password="bookbuster", database="pazlort$bookbuster")
+db = Database(host="localhost", user="root", password="", database="miapp")
 catalogo = Catalogo(db)
 
 

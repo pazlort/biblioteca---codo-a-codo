@@ -1,4 +1,6 @@
-CREATE DATABASE IF NOT EXISTS biblioteca_bookbuster CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI; USE biblioteca_bookbuster;
+--USE ESTE PORQUE ME TIRABA ERROR AL AGREGAR EL NOW Y DE AHI SE ME ARMO UN CHOCLO ENORME DE ERRORES
+
+CREATE DATABASE IF NOT EXISTS miapp CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI; USE miapp;
 
 -- Crear la tabla de usuarios
 CREATE TABLE IF NOT EXISTS usuarios (
@@ -37,87 +39,6 @@ CREATE TABLE IF NOT EXISTS prestamos (
     observaciones VARCHAR(255),
     FOREIGN KEY (id_user) REFERENCES prestamos(id_prestamo)
 ) ENGINE=InnoDB CHARACTER SET UTF8MB4 COLLATE UTF8MB4_UNICODE_CI;
-
--- Trigger para actualizar update_at en usuarios
-DELIMITER //
-CREATE TRIGGER update_update_at_usuarios BEFORE
-UPDATE ON usuarios FOR EACH ROW BEGIN
-    SET NEW.update_at = NOW();
-END;
-//
-DELIMITER ;
-
--- Trigger para manejar eliminación en usuarios
-DELIMITER //
-CREATE TRIGGER update_delete_at_on_state_usuarios BEFORE
-UPDATE ON usuarios FOR EACH ROW BEGIN
-    IF NEW.state = 0 THEN
-        SET NEW.delete_at = NOW();
-    END IF;
-END;
-//
-DELIMITER ;
-
-
--- Trigger para actualizar update_at en roles
-DELIMITER //
-CREATE TRIGGER update_update_at_roles BEFORE
-UPDATE ON roles FOR EACH ROW BEGIN
-    SET NEW.update_at = NOW();
-END;
-//
-DELIMITER ;
-
--- Trigger para manejar eliminación en roles
-DELIMITER //
-CREATE TRIGGER update_delete_at_on_state_roles BEFORE
-UPDATE ON roles FOR EACH ROW BEGIN
-    IF NEW.state = 0 THEN
-        SET NEW.delete_at = NOW();
-    END IF;
-END;
-//
-DELIMITER ;
-
--- Trigger para actualizar update_at en libros
-DELIMITER //
-CREATE TRIGGER update_update_at_libros BEFORE
-UPDATE ON libros FOR EACH ROW BEGIN
-    SET NEW.update_at = NOW();
-END;
-//
-DELIMITER ;
-
--- Trigger para manejar eliminación en libros
-DELIMITER //
-CREATE TRIGGER update_delete_at_on_state_libros BEFORE
-UPDATE ON libros FOR EACH ROW BEGIN
-    IF NEW.state = 0 THEN
-        SET NEW.delete_at = NOW();
-    END IF;
-END;
-//
-DELIMITER ;
-
--- Trigger para actualizar update_at en prestamos
-DELIMITER //
-CREATE TRIGGER update_update_at_prestamos BEFORE
-UPDATE ON prestamos FOR EACH ROW BEGIN
-    SET NEW.update_at = NOW();
-END;
-//
-DELIMITER ;
-
--- Trigger para manejar eliminación en prestamos
-DELIMITER //
-CREATE TRIGGER update_delete_at_on_state_prestamos BEFORE
-UPDATE ON prestamos FOR EACH ROW BEGIN
-    IF NEW.state = 0 THEN
-        SET NEW.delete_at = NOW();
-    END IF;
-END;
-//
-DELIMITER ;
 
 INSERT INTO usuarios
     (email, username, pass_user, firstname, lastname, id_rol)
