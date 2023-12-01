@@ -56,26 +56,33 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Préstamos</a>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./catalogo-completo.html">Cátalogo completo</a>
+						<a class="nav-link" href="/catalogoCompleto.html">Cátalogo</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./index.html#contacto">Contacto</a>
+						<a class="nav-link" href="prestamos.html">Prestamos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="devolucion.html">Devoluciones</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html#contacto">Contacto</a>
 					</li>
 				</ul>
-				<div class="search_icon"><a href="./index.html"><img src="images/user-icon.png">
-						<span class="padding_left_15">Volver al inicio</span></a></div>
+				<div class="search_icon"><a href="register.html"><img src="images/user-icon.png">
+						<span class="padding_left_15">Login</span></a></div>
 			</div>
 		</nav>
 	</div>
+	<!-- header section end -->
 	<br><br>
-    
+
 	<main>
 
-        <h2 style="color:#456E9D; font-weight:bold">Fomulario de préstamos</h2>
+		<h2 style="color:#456E9D; font-weight:bold">Fomulario de préstamos</h2>
 		<form action="" class="formulario" id="formulario">
 
 
@@ -83,7 +90,8 @@
 			<div class="formulario__grupo" id="grupo__id_user">
 				<label for="id_user" class="formulario__label">id user(nro. de socio):</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="id_user" id="ide_user" placeholder="Ingrese su nro. de socio. Por ejemplo: 1546">
+					<input type="text" class="formulario__input" name="id_user" id="ide_user"
+						placeholder="Ingrese su nro. de socio. Por ejemplo: 1546">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
@@ -95,7 +103,8 @@
 			<div class="formulario__grupo" id="grupo__id_libro">
 				<label for="id_libro" class="formulario__label">id libro:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="id_libro" id="id_libro" placeholder="Ingrese el id del libro">
+					<input type="text" class="formulario__input" name="id_libro" id="id_libro"
+						placeholder="Ingrese el id del libro">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
@@ -109,7 +118,8 @@
 			<div class="formulario__grupo" id="grupo__id_libro">
 				<label for="nombre_del_libro" class="formulario__label">Nombre del libro:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="nombre_del_libro" id="nombre_del_libro" placeholder="Ingrese el nombre del libro">
+					<input type="text" class="formulario__input" name="nombre_del_libro" id="nombre_del_libro"
+						placeholder="Ingrese el nombre del libro">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
@@ -122,7 +132,8 @@
 			<div class="formulario__grupo" id="grupo__id_libro">
 				<label for="autor_libro" class="formulario__label">Autor:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="autor_libro" id="autor_libro" placeholder="Ingrese el autor del libro.">
+					<input type="text" class="formulario__input" name="autor_libro" id="autor_libro"
+						placeholder="Ingrese el autor del libro.">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
@@ -136,10 +147,11 @@
 			<div class="formulario__grupo" id="grupo__id_del_libro">
 				<label for="coleccion_libro" class="formulario__label">Colección:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="coleccion_libro" id="coleccion_libro" placeholder="Ingrese la colección del libro.">
+					<input type="text" class="formulario__input" name="coleccion_libro" id="coleccion_libro"
+						placeholder="Ingrese la colección del libro.">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				
+
 			</div>
 
 
@@ -147,33 +159,36 @@
 			<div class="formulario__grupo" id="grupo__id_del_libro">
 				<label for="editorial_libro" class="formulario__label">Editorial:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="editorial_libro" id="editorial_libro" placeholder="Ingrese la colección del libro.">
+					<input type="text" class="formulario__input" name="editorial_libro" id="editorial_libro"
+						placeholder="Ingrese la colección del libro.">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				
+
 			</div>
 			<!-- Grupo: rol_id no va acá -->
-		
 
-            <div class="formulario__grupo" id="id_del_libro">
+
+			<div class="formulario__grupo" id="id_del_libro">
 				<label for="fecha_prestamo" class="formulario__label">Fecha desde:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="fecha_prestamo" id="fecha_prestamo" placeholder="Ingrese fecha de préstamo.">
+					<input type="text" class="formulario__input" name="fecha_prestamo" id="fecha_prestamo"
+						placeholder="Ingrese fecha de préstamo.">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
 					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
 			</div>
-            <div class="formulario__grupo" id="id_del_libro">
+			<div class="formulario__grupo" id="id_del_libro">
 				<label for="observaciones_libros" class="formulario__label">Observaciones:</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="observaciones_libros" id="observaciones_libros" placeholder="Ingrese alguna observación.">
+					<input type="text" class="formulario__input" name="observaciones_libros" id="observaciones_libros"
+						placeholder="Ingrese alguna observación.">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">
 					El campo Nombre debe tener de 1 a 40 dígitos. Sólo se pueden usar letras y espacios.</p>
 			</div>
-        
+
 
 			<!-- Grupo: Terminos y Condiciones -->
 			<div class="formulario__grupo" id="grupo__terminos">
@@ -201,8 +216,10 @@
 			<div class="footer_menu">
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="catalogo-completo.html">Catálogo completo</a></li>
-					<li><a href="#contacto">Contacto</a></li>
+					<li><a href="catalogoCompleto.html">Catálogo</a></li>
+					<li><a href="prestamos.html">Prestamos</a></li>
+					<li><a href="devolucion.html">Devoluciones</a></li>
+					<li><a href="index.html#contacto">Contacto</a></li>
 				</ul>
 			</div>
 			<div class="social_icon">
@@ -222,8 +239,6 @@
 		</span>
 	</a>
 	<!-- footer  section end -->
-
-
 	<script src="js/script_form.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>

@@ -14,7 +14,29 @@ class Database:
             coleccion_libro VARCHAR(100) NOT NULL,
             editorial_libro VARCHAR(50) NOT NULL,
             url_img VARCHAR(100) NOT NULL)"""
+        sql_roles = """CREATE TABLE IF NOT EXISTS roles (
+            id_rol INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(50) NOT NULL)"""
+        sql_user = """CREATE TABLE IF NOT EXISTS usuarios (
+            id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            email VARCHAR(255) NOT NULL UNIQUE,
+            username VARCHAR(50) NOT NULL,
+            pass_user VARCHAR(100) NOT NULL,
+            firstname VARCHAR(50) NOT NULL,
+            lastname VARCHAR(50) NOT NULL,
+            id_rol TINYINT(1))"""
+        sql_prestamo = """CREATE TABLE IF NOT EXISTS prestamos (
+            id_prestamo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            id_user INT NOT NULL,
+            id_libro INT NOT NULL,
+            fecha_desde DATETIME NOT NULL,
+            fecha_hasta INT NOT NULL,
+            observaciones VARCHAR(255),
+            FOREIGN KEY (id_user) REFERENCES prestamos(id_prestamo))"""
         self.crear_tabla(sql_libros)
+        self.crear_tabla(sql_user)
+        self.crear_tabla(sql_roles)
+        self.crear_tabla(sql_prestamo)
 
     def crear_tabla(self, sql):
         self.cursor.execute(sql)
@@ -22,67 +44,37 @@ class Database:
 
 
 class Catalogo:
-    libros = []
+    def __init__(self, db):
+        self.db = db
 
-    def agregar_libro(
-        self,
-        titulo_libro,
-        autor_libro,
-        coleccion_libro,
-        editorial_libro,
-        url_img,
-    ):
-        sql = "INSERT INTO libros (titulo_libro, autor_libro, coleccion_libro, editorial_libro, url_img) VALUES(%s, %s, %s, %s, %s)"
-        data = (
-            titulo_libro,
-            autor_libro,
-            coleccion_libro,
-            editorial_libro,
-            url_img,
-        )
-        db.cursor.execute(sql, data)
-        db.conn.commit()
+    def agregar(self, sql, *data):
+        self.db.cursor.execute(sql[0], data)
+        self.db.conn.commit()
         return True
 
-    def listar_libros(self):
-        db.cursor.execute("SELECT * FROM libros")
-        productos = db.cursor.fetchall()
-        return productos
+    def listar(self, table_db):
+        self.db.cursor.execute(f"SELECT * FROM {table_db}")
+        elemento = self.db.cursor.fetchall()
+        return elemento
 
-    def ver_libro(self, id_libro):
-        db.cursor.execute(f"SELECT * FROM libros WHERE id_libro = {id_libro}")
-        resq = db.cursor.fetchone()
+    def ver(self, id_libro, table_db):
+        self.db.cursor.execute(f"SELECT * FROM {table_db} WHERE id_libro = {id_libro}")
+        resq = self.db.cursor.fetchone()
         if resq:
             return resq
         else:
             return False
 
-    def borrar_libros(self, id_libro):
-        db.cursor.execute(f"DELETE FROM libros WHERE id_libro = {id_libro}")
-        db.conn.commit()
-        return db.cursor.rowcount > 0
+    def borrar(self, id_libro, table_db):
+        self.db.cursor.execute(f"DELETE FROM {table_db} WHERE id_libro = {id_libro}")
+        self.db.conn.commit()
+        return self.db.cursor.rowcount > 0
 
-    def edit_libros(
+    def editar(
         self,
-        id_libro,
-        new_titulo_libro,
-        new_autor_libro,
-        new_coleccion_libro,
-        new_editorial_libro,
-        new_url_img,
+        sql,
+        *data,
     ):
-        sql = "UPDATE libros SET titulo_libro = %s, autor_libro = %s, coleccion_libro = %s, editorial_libro = %s, url_img = %s WHERE id_libro = %s"
-        data = (
-            new_titulo_libro,
-            new_autor_libro,
-            new_coleccion_libro,
-            new_editorial_libro,
-            new_url_img,
-            id_libro,
-        )
-        db.cursor.execute(sql, data)
-        db.conn.commit()
-        return db.cursor.rowcount > 0
-
-
-db = Database(host="localhost", user="root", password="", database="miapp")
+        self.db.cursor.execute(sql, data)
+        self.db.conn.commit()
+        return self.db.cursor.rowcount > 0

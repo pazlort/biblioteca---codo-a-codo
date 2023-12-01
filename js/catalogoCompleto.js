@@ -1,10 +1,8 @@
-const URL="http://127.0.0.1:5000/"
+const URL="http://pazlort.mysql.pythonanywhere-services.com"
 fetch(URL+'catalogo_completo')
     .then(res => res.json())
     .then(datos => {
         for (let i = 0; i < datos.length; i=i+4) {
-            console.log(datos);
-            console.log(i);
             let catalogoCompleto = document.getElementById('cards');
             let card= document.createElement('div');
             card.innerHTML = 
@@ -42,3 +40,13 @@ fetch(URL+'catalogo_completo')
         }
     })
     .catch(error=>{alert('Error al obtener el catalogo')})
+
+
+/* 
+PARA CONTINUAR
+    *cargar todo a la db
+    *hace que se haga un for dentro de otro asi no queda choclo esta parte de la api
+    *en el index agregar boton y que se vayan mostrande de a 20 libros
+    *modelo hacerlo mas generico
+    *crear dbs con crud
+*/
