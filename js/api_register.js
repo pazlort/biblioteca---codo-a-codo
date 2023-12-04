@@ -1,5 +1,5 @@
-//const URL="http://pazlort.mysql.pythonanywhere-services.com"
-const URL="http://127.0.0.1:5000/"
+const URL="http://pazlort.mysql.pythonanywhere-services.com"
+//const URL="http://127.0.0.1:5000/"
 
 document.getElementById('formulario').addEventListener('submit', function (event) {
     event.preventDefault(); 

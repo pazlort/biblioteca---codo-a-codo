@@ -1,5 +1,5 @@
-//const URL="http://pazlort.mysql.pythonanywhere-services.com"
-const URL="http://127.0.0.1:5000/"
+const URL="http://pazlort.mysql.pythonanywhere-services.com"
+//const URL="http://127.0.0.1:5000/"
 fetch(URL+'catalogo_completo')
     .then(res => res.json())
     .then(datos => {
