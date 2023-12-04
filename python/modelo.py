@@ -43,12 +43,15 @@ class Database:
         self.conn.commit()
 
 
-class Catalogo:
+class Crud:
     def __init__(self, db):
         self.db = db
 
     def agregar(self, sql, *data):
-        self.db.cursor.execute(sql[0], data)
+        print("sql", sql)
+        print("sql0", sql[0])
+        print("data", data)
+        self.db.cursor.execute(sql, data)
         self.db.conn.commit()
         return True
 
