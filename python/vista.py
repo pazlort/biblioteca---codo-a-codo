@@ -112,7 +112,9 @@ def modificar_user(id_user):
 
 
 @app.route("/users/<int:id_user>", methods=["DELETE"])
-def eliminar_user(id_user):
+def eliminar_user():
+    id_user = request.form["id_user"]
+    print(id_user)
     user = crud.ver(id_user, "usuarios")
     if user:
         if crud.borrar(id_user, "usuarios"):
