@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll('#formulario input');
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 		// Letras y espacios, se pueden usar acentos.
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 		// Letras y espacios, se  pueden usar acentos.
-	usuario: /^[a-zA-Z0-9\_\-]{8,16}$/, 	// Letras, números, guión medio y guión bajo
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 	// Letras, números, guión medio y guión bajo
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	password: /^.{8,16}$/, 					//
 	nacimiento: /^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/, // Fecha: dd/mm/yyyy o dd-mm-yyyy
