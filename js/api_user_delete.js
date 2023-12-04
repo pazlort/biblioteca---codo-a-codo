@@ -1,54 +1,25 @@
 //const URL="http://pazlort.mysql.pythonanywhere-services.com"
 const URL="http://127.0.0.1:5000/"
 
-fetch(URL+'users')
-    .then(res => res.json())
-    .then(datos => {
-        
+
+
+document.getElementById('eliminar_user_1').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+    var formData = new FormData();
+    let imp=document.getElementById('eliminar_user_1')
+    console.log(imp);
+    formData.append('id', document.getElementById('nombre').value);
+    formData.append('apellido', document.getElementById('apellido').value);
+    formData.append('usuario', document.getElementById('usuario').value);
+    formData.append('correo', document.getElementById('correo').value);
+    formData.append('password', document.getElementById('password').value);
+    formData.append('rol_id', document.getElementById('rol_id').value);
+    console.log(formData);
+
+
+    fetch(URL+'users/<int:id_user>', {method:'DELETE', body: formData})
+        .then(res => res.json())
+        .then(datos => {
+            console.log(datos);
+        })
     })
-
-      const app = Vue.createApp({
-          data() {
-              return {
-                  productos: []
-              }
-          },
-          methods: {
-              obtenerProductos() {
-                  // Obtenemos el contenido del inventario
-                  fetch(URL + 'users')
-                      .then(response => {
-                           // Parseamos la respuesta JSON 
-                          if (response.ok) { return response.json();}
-                      })
-                      .then(data => {
-                          // El código Vue itera este elemento para generar la tabla
-                          this.productos = data;
-                      })
-                      .catch(error => {
-                          console.log('Error:', error);
-                          alert('Error al obtener los productos.');
-                      });
-              },
-              eliminarProducto(codigo) {
-                  if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-                      fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
-                          .then(response => {
-                              if (response.ok) {
-                                  this.productos = this.productos.filter(producto => producto.codigo !== codigo);
-                                  alert('Producto eliminado correctamente.');
-                              }
-                          })
-                          .catch(error => {
-                              alert(error.message);
-                          });
-                  }
-              }
-          },
-          mounted() {
-              //Al cargar la página, obtenemos la lista de productos
-              this.obtenerProductos();
-          }
-      });
-
-      app.mount('body');

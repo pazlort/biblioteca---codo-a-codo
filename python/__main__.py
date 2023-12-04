@@ -16,3 +16,4 @@ if __name__ == "__main__":
 #    *Database host address:pazlort.mysql.pythonanywhere-services.com
 #    *Username:pazlort
 #    *db = Database(host="pazlort.mysql.pythonanywhere-services.com", user="pazlort", password="bookbuster", database="pazlort$bookbuster")
+

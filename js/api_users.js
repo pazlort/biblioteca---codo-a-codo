@@ -18,9 +18,11 @@ fetch(URL+'users')
                 } else if (datos[nro+i].id_rol == 3) {
                     rol_name='Usuario'
                 }
-                let rowusers = document.getElementById('create_row_users'+nro);
+                let nro_id= datos[nro+i].id_user
+                let rowusers = document.getElementById('create_row_users'+(nro));
                 let col= document.createElement('div');
                 col.classList.add('col-sm-3', 'image_3');
+                col.setAttribute('id', 'create_col_users_'+nro_id);
                 col.innerHTML =
                    ' <div class="card" style="width: 18rem;">'+
                     ' <div class="card-body">'+
@@ -33,7 +35,7 @@ fetch(URL+'users')
                             '</ul>'+
                         '<div class="card-body">'+
                             '<a href="#" class="card-link">Modificar</a>'+
-                            '<button type="submit" class="card-link" id="eliminar_user'+(nro+i)+'">Eliminar</button>'+
+                            '<button type="submit" class="card-link" id="eliminar_user_'+(nro_id)+'">Eliminar</button>'+
                         '</div>'+
                     '</div>'
                 rowusers.appendChild(col);

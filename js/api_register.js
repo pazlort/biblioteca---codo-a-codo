@@ -12,21 +12,21 @@ document.getElementById('formulario').addEventListener('submit', function (event
     formData.append('rol_id', document.getElementById('rol_id').value);
     console.log(formData);
 
-fetch(URL+'users',{method:'POST', body: formData})
-    .then(res => res.json())
-    .then(datos => {
-        console.log('hice el fetch');
-        alert('User agregado correctamente')
-        document.getElementById('nombre').value="";
-        document.getElementById('apellido').value="";
-        document.getElementById('usuario').value="";
-        document.getElementById('correo').value="";
-        document.getElementById('password').value="";
-        document.getElementById('password2').value="";
-        document.getElementById('rol_id').value="";
-    })
-    .catch(function (error) {
-        // Mostramos el error, y no limpiamos el form.
-        alert('Error al agregar el producto.');
-    });
+    fetch(URL+'users',{method:'POST', body: formData})
+        .then(res => res.json())
+        .then(datos => {
+            console.log('hice el fetch');
+            alert('User agregado correctamente')
+            document.getElementById('nombre').value="";
+            document.getElementById('apellido').value="";
+            document.getElementById('usuario').value="";
+            document.getElementById('correo').value="";
+            document.getElementById('password').value="";
+            document.getElementById('password2').value="";
+            document.getElementById('rol_id').value="";
+        })
+        .catch(function (error) {
+            // Mostramos el error, y no limpiamos el form.
+            alert('Error al agregar el producto.');
+        });
 })
