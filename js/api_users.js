@@ -1,4 +1,4 @@
-const URL="http://pazlort.mysql.pythonanywhere-services.com"
+const URL="https://pazlort.pythonanywhere.com/"
 //const URL="http://127.0.0.1:5000/"
 fetch(URL+'users')
     .then(res => res.json())

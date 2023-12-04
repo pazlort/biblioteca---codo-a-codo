@@ -4,7 +4,7 @@ import mysql.connector
 class Database:
     def __init__(self, host, user, password, database):
         self.conn = mysql.connector.connect(
-            host=host, user=user, password=password, database=database, port=3307
+            host=host, user=user, password=password, database=database
         )
         self.cursor = self.conn.cursor(dictionary=True)
         sql_libros = """CREATE TABLE IF NOT EXISTS libros (
