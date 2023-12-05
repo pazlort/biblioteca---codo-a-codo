@@ -6,13 +6,16 @@ links.innerHTML =
     '<a class="nav-link" href="index.html">Inicio</a>'+
 '</li>'+
 '<li class="nav-item">'+
-    '<a class="nav-link" href="/catalogoCompleto.html">Cátalogo</a>'+
+    '<a class="nav-link" href="/catalogoCompleto.html">Catálogo</a>'+
 '</li>'+
 '<li class="nav-item">'+
-    '<a class="nav-link" href="prestamos.html">Prestamos</a>'+
+    '<a class="nav-link" href="prestamos.html">Préstamos</a>'+
 '</li>'+
 '<li class="nav-item">'+
     '<a class="nav-link" href="devolucion.html">Devoluciones</a>'+
+'</li>'+
+'<li class="nav-item">'+
+    '<a class="nav-link" href="users.html">Users</a>'+
 '</li>'+
 '<li class="nav-item">'+
     '<a class="nav-link" href="merch.html">Merchandising</a>'+

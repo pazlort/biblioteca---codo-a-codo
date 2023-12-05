@@ -6,8 +6,9 @@ contenido.innerHTML =
    '<ul>'+
       '<li><a href="index.html">Inicio</a></li>'+
       '<li><a href="catalogoCompleto.html">Catálogo</a></li>'+
-      '<li><a href="prestamos.html">Prestamos</a></li>'+
+      '<li><a href="prestamos.html">Préstamos</a></li>'+
       '<li><a href="devolucion.html">Devoluciones</a></li>'+
+      '<li><a href="users.html">Users</a></li>'+
       '<li><a href="merch.html">Merchandising</a></li>'+
       '<li><a href="index.html#contacto">Contacto</a></li>'+
       '<li><a href="login.html">Login</a></li>'+

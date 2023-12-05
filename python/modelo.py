@@ -57,16 +57,16 @@ class Crud:
         elemento = self.db.cursor.fetchall()
         return elemento
 
-    def ver(self, id_libro, table_db):
-        self.db.cursor.execute(f"SELECT * FROM {table_db} WHERE id_libro = {id_libro}")
+    def ver(self, table_db, id_table, nro_id):
+        self.db.cursor.execute(f"SELECT * FROM {table_db} WHERE {id_table} = {nro_id}")
         resq = self.db.cursor.fetchone()
         if resq:
             return resq
         else:
             return False
 
-    def borrar(self, id_libro, table_db):
-        self.db.cursor.execute(f"DELETE FROM {table_db} WHERE id_libro = {id_libro}")
+    def borrar(self, table_db, id_table, nro_id):
+        self.db.cursor.execute(f"DELETE FROM {table_db} WHERE {id_table} = {nro_id}")
         self.db.conn.commit()
         return self.db.cursor.rowcount > 0
 

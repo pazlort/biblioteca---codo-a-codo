@@ -294,10 +294,29 @@ button {
 .see_bt {
     width: 170px;
     float: left;
+    margin-inline: 138%;
     padding-top: 30px;
+
 }
 
 .see_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #67A4E9;
+    text-align: center;
+    padding: 7px 0px;
+    border-radius: 40px;
+}
+.see_bt2 {
+    width: 170px;
+    float: left;
+    padding-top: 30px;
+
+}
+
+.see_bt2 a {
     width: 100%;
     float: left;
     font-size: 18px;

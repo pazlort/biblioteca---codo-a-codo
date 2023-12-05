@@ -19,7 +19,7 @@ fetch(URL+'catalogo_completo')
                 let col= document.createElement('div');
                 col.classList.add('col', 'image_3');
                 col.innerHTML = 
-                        '<img src="images/catalogo/'+ datos[arrayNros[nro]+i].url_img + '" class="image">'+
+                        '<a href="libros.html/'+datos[arrayNros[nro]+i].id_libro+'"><img src="images/catalogo/'+ datos[arrayNros[nro]+i].url_img + '"class="image"></a>'+
                         '<h1 class="code_text"> ' + datos[arrayNros[nro]+i].titulo_libro + '</h1>' +
                         '<p class="there_text">Autor: ' + datos[arrayNros[nro]+i].autor_libro + '</p>' +
                         '<p class="there_text">Colección: ' + datos[arrayNros[nro]+i].coleccion_libro + '</p>' +

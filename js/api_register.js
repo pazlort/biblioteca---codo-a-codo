@@ -10,7 +10,6 @@ document.getElementById('formulario').addEventListener('submit', function (event
     formData.append('correo', document.getElementById('correo').value);
     formData.append('password', document.getElementById('password').value);
     formData.append('rol_id', document.getElementById('rol_id').value);
-    console.log(formData);
 
     fetch(URL+'users',{method:'POST', body: formData})
         .then(res => res.json())

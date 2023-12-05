@@ -4,7 +4,6 @@ from vista import app
 
 
 if __name__ == "__main__":
-    # db = Database(host="localhost", user="root", password="", database="miapp")
     db = Database(
         host="http://pazlort.mysql.pythonanywhere-services.com",
         user="pazlort",
