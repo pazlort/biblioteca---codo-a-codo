@@ -6,12 +6,11 @@ from modelo import Crud, Database
 app = Flask(__name__)
 CORS(app)
 db = Database(
-    host="https://pazlort.pythonanywhere.com/",
+    host="http://pazlort.mysql.pythonanywhere-services.com",
     user="pazlort",
     password="bookbuster",
     database="pazlort$bookbuster",
 )
-# db = Database(host="localhost", user="root", password="", database="miapp")
 crud = Crud(db)
 
 

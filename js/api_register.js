@@ -27,6 +27,6 @@ document.getElementById('formulario').addEventListener('submit', function (event
         })
         .catch(function (error) {
             // Mostramos el error, y no limpiamos el form.
-            alert('Error al agregar el producto.');
+            alert('Error al agregar el user.');
         });
 })

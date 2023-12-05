@@ -48,9 +48,6 @@ class Crud:
         self.db = db
 
     def agregar(self, sql, *data):
-        print("sql", sql)
-        print("sql0", sql[0])
-        print("data", data)
         self.db.cursor.execute(sql, data)
         self.db.conn.commit()
         return True
