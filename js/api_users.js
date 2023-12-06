@@ -15,7 +15,7 @@ fetch(URL+'users')
             for (let i = 0; i < 2; i++) {
                 var rol=datos[nro+i].id_rol;
                 if (rol == 1) {
-                    rol_name='Adminitrador'
+                    rol_name='Administrador'
                 } else if (rol == 2) {
                     rol_name='Gestor'
                 } else if (rol == 3) {
@@ -51,18 +51,113 @@ setTimeout(() => {
     botones=document.querySelectorAll('button.card-link');
     for (let i = 0; i < botones.length; i++) {
         let id_user= (botones[i].id).split('_')[2];
-        document.getElementById(botones[i].id).addEventListener('click', function (event) {
-            event.preventDefault();
-            if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-                fetch(URL + ('users/'+id_user), {method: 'DELETE' })
-                .then(res => {
-                    console.log(res);
-                    if (res.ok) {
-                        alert('User eliminado correctamente.');
-                        location.reload()
-                    }
-                })
-            }
-        })
+        let accion = (botones[i].id.split('_'))[0];
+        if (accion == 'eliminar') {
+            document.getElementById(botones[i].id).addEventListener('click', function (event) {
+                event.preventDefault();
+                if (confirm('¿Estás seguro de que quieres eliminar este usuario?')) {
+                    fetch(URL + ('users/'+id_user), {method: 'DELETE' })
+                    .then(res => {
+                        if (res.ok) {
+                            alert('User eliminado correctamente.');
+                            location.reload()
+                        }
+                    })
+                }
+            })
+        }else if (accion == 'edit') {
+            document.getElementById(botones[i].id).addEventListener('click', function (event) {
+                event.preventDefault('users_list');
+                fetch(URL + ('users/'+id_user))
+                    .then(res => res.json())
+                    .then(res => {
+                        const update_form = document.getElementById("users");
+                        const child = document.getElementById("container");
+                        update_form.removeChild(child);
+                        let form= document.createElement('form');
+                        form.classList.add('formulario');
+                        form.setAttribute('id', 'edit_form');
+                        form.setAttribute('style','background-color:#E5E5E5;')
+                        update_form.appendChild(form);
+                        form.innerHTML =
+                            '<div class="formulario__grupo" id="grupo__nombre">'+
+                                '<label for="nombre" class="formulario__label">Nombre</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<input type="text" class="formulario__input" name="nombre" id="nombre" value="'+res.firstname+'">'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="formulario__grupo" id="grupo__apellido">'+
+                                    '<label for="apellido" class="formulario__label">Apellido</label>'+
+                                    '<div class="formulario__grupo-input">'+
+                                    '<input type="text" class="formulario__input" name="apellido" id="apellido" value="'+res.lastname+'">'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo" id="grupo__usuario">'+
+                                '<label for="usuario" class="formulario__label">Nombre de Usuario</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<input type="text" class="formulario__input" name="usuario" id="usuario" value="'+res.username+'">'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo" id="grupo__correo">'+
+                                '<label for="correo" class="formulario__label">Correo Electrónico</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<input type="email" class="formulario__input" name="correo" id="correo" value="'+res.email+'">'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo" id="grupo__password">'+
+                                '<label for="password" class="formulario__label">Contraseña</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<input type="password" class="formulario__input" name="password" id="password" value="'+res.pass_user+'">'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo" id="grupo__password2">'+
+                                '<label for="password2" class="formulario__label">Repetir Contraseña</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<input type="password" class="formulario__input" name="password2" id="password2" value="'+res.pass_user+'">'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo" id="grupo__rol_id">'+
+                                '<label for="rol_id" class="formulario__label">Rol asignado</label>'+
+                                '<div class="formulario__grupo-input">'+
+                                    '<select class="formulario__input" name="rol_id" id="rol_id" value="'+res.id_rol+'">'+
+                                        '<option value="" selected="selected">Seleccione un Rol</option>'+
+                                        '<option value="1">Administrador</option>'+
+                                        '<option value="2">Gestor</option>'+
+                                        '<option value="3">Usuario</option>'+
+                                    '</select>'+
+                                '</div>'+
+                            '</div>'+
+                            '<div class="formulario__grupo formulario__grupo-btn-enviar" id="boton">'+
+                                '<button type="submit" class="formulario__btn">Enviar</button>'+
+                            ' </div>'+
+                            '<br>'
+                        document.getElementById('boton').addEventListener('click', function (event) {
+                            event.preventDefault(); 
+                            var formData = new FormData();
+                            formData.append('nombre', document.getElementById('nombre').value);
+                            formData.append('apellido', document.getElementById('apellido').value);
+                            formData.append('usuario', document.getElementById('usuario').value);
+                            formData.append('correo', document.getElementById('correo').value);
+                            formData.append('password', document.getElementById('password').value);
+                            formData.append('rol_id', document.getElementById('rol_id').value);
+                            if (confirm('¿Estás seguro de que quieres modificar este usuario?')) {
+                                fetch(URL + ('users/'+res.id_user),{method:'PUT', body: formData})
+                                    .then(res => res.json())
+                                    .then(res => {
+                                        alert('Se actualizo el User correctamente');
+                                        location.reload();
+                                    })
+                                    .catch(function (error) {
+                                        alert('Error al agregar el user.');
+                                    });
+                            }
+                        })
+                        
+                    })
+            })
+        }
     }
 }, "2000");
+
+
+

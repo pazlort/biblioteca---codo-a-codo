@@ -15,6 +15,7 @@ if __name__ == "__main__":
 
 
 # PARA CONTINUAR
+#    *poner filtro en catalogo
 #    *poner control de errores
 #    *ver validacion de forms
 #    *Database host address:pazlort.mysql.pythonanywhere-services.com

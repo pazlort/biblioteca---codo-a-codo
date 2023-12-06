@@ -10,22 +10,21 @@ document.getElementById('formulario').addEventListener('submit', function (event
     formData.append('correo', document.getElementById('correo').value);
     formData.append('password', document.getElementById('password').value);
     formData.append('rol_id', document.getElementById('rol_id').value);
-
-    fetch(URL+'users',{method:'POST', body: formData})
-        .then(res => res.json())
-        .then(datos => {
-            console.log('hice el fetch');
-            alert('User agregado correctamente')
-            document.getElementById('nombre').value="";
-            document.getElementById('apellido').value="";
-            document.getElementById('usuario').value="";
-            document.getElementById('correo').value="";
-            document.getElementById('password').value="";
-            document.getElementById('password2').value="";
-            document.getElementById('rol_id').value="";
-        })
-        .catch(function (error) {
-            // Mostramos el error, y no limpiamos el form.
-            alert('Error al agregar el user.');
-        });
+    if (confirm('¿Estás seguro de que quieres agregar este usuario?')) {
+        fetch(URL+'users',{method:'POST', body: formData})
+            .then(res => res.json())
+            .then(datos => {
+                alert('User agregado correctamente')
+                document.getElementById('nombre').value="";
+                document.getElementById('apellido').value="";
+                document.getElementById('usuario').value="";
+                document.getElementById('correo').value="";
+                document.getElementById('password').value="";
+                document.getElementById('password2').value="";
+                document.getElementById('rol_id').value="";
+            })
+            .catch(function (error) {
+                alert('Error al agregar el user.');
+            });
+    }
 })
