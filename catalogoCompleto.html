@@ -56,7 +56,15 @@
          <h1 class="newsletter_text"> Catálogo completo </h1>
          <div class="movies_section_2 layout_padding">
             <div class="movies_main">
-               <div class="iamge_movies_main">
+               <select class="form-select form-select-sm" aria-label="Small select example" id="filter">
+                  <option selected>Ordenar por...</option>
+                  <option value="1">Nombre A - Z</option>
+                  <option value="2">Nombre Z - A</option>
+                  <option value="3">Autor</option>
+                  <option value="4">Colección</option>
+                  <option value="5">Editorial</option>
+               </select>
+               <div class="iamge_movies_main" id="padre_cards">
                   <div class="container text-center" id="cards"></div>
                </div>
             </div>

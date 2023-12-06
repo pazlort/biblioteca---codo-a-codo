@@ -17,9 +17,9 @@ crud = Crud(db)
 #################################################
 ###                LIBROS                     ###
 #################################################
-@app.route("/catalogo_completo", methods=["GET"])
-def catalogo_completo():
-    catalogo_completo = crud.listar("libros")
+@app.route("/catalogo_completo/<string:objeto>/<string:orden>", methods=["GET"])
+def catalogo_completo(objeto, orden):
+    catalogo_completo = crud.ordenar("libros", objeto, orden)
     return jsonify(catalogo_completo), 201
 
 
@@ -106,23 +106,3 @@ def eliminar_user(id_user):
             return jsonify({"mensaje": "Error al eliminar el user"}), 500
     else:
         return jsonify({"mensaje": "User no encontrado"}), 404
-
-
-#################################################
-###                ROLES                      ###
-#################################################
-
-
-@app.route("/roles", methods=["GET"])
-def roles():
-    roles_list = crud.listar("roles")
-    return jsonify(roles_list), 201
-
-
-@app.route("/roles/<int:id_rol>", methods=["GET"])
-def mostrar_rol(id_rol):
-    rol = crud.ver(id_rol, "roles")
-    if rol:
-        return jsonify(rol), 201
-    else:
-        return "Usuario no encontrado", 404

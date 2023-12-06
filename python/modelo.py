@@ -78,3 +78,8 @@ class Crud:
         self.db.cursor.execute(sql, data)
         self.db.conn.commit()
         return self.db.cursor.rowcount > 0
+    
+    def ordenar(self, table_db,objeto, orden):
+        self.db.cursor.execute(f"SELECT * FROM {table_db} ORDER BY {objeto} {orden}")
+        elemento = self.db.cursor.fetchall()
+        return elemento
