@@ -23,9 +23,13 @@
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <!-- owl stylesheets -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
@@ -48,18 +52,10 @@
    <!-- header section end -->
    <!-- movies section start -->
    <div class="movies_section layout_padding">
-      <div class="container" id="container_catalogo">
-         <h1 class="newsletter_text" id="title"> Catálogo completo </h1>
-         <div class="movies_section_2 layout_padding" id="catalogo_completo">
+      <div class="container">
+         <h1 class="newsletter_text"> Catálogo completo </h1>
+         <div class="movies_section_2 layout_padding">
             <div class="movies_main">
-               <select class="form-select form-select-sm" aria-label="Small select example" id="filter">
-                  <option selected>Ordenar por...</option>
-                  <option value="1">Nombre A - Z</option>
-                  <option value="2">Nombre Z - A</option>
-                  <option value="3">Autor</option>
-                  <option value="4">Colección</option>
-                  <option value="5">Editorial</option>
-               </select>
                <div class="iamge_movies_main" id="padre_cards">
                   <div class="container text-center" id="cards"></div>
                </div>
@@ -86,6 +82,8 @@
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/botonSubir.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/custom.js"></script>
    <!-- javascript -->
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>

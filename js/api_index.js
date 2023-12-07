@@ -24,10 +24,7 @@ fetch(URL + "/catalogo_completo/" + objeto + '/' + orden)
                 col.classList.add('col', 'image_3');
                 col.innerHTML = 
                         '<a href="libros.html/'+datos[arrayNros[nro]+i].id_libro+'"><img src="images/catalogo/'+ datos[arrayNros[nro]+i].url_img + '"class="image"></a>'+
-                        '<h1 class="code_text"> ' + datos[arrayNros[nro]+i].titulo_libro + '</h1>' +
-                        '<p class="there_text">Autor: ' + datos[arrayNros[nro]+i].autor_libro + '</p>' +
-                        '<p class="there_text">Colección: ' + datos[arrayNros[nro]+i].coleccion_libro + '</p>' +
-                        '<p class="there_text">Editorial: ' + datos[arrayNros[nro]+i].editorial_libro + '</p>'
+                        '<h1 class="code_text"> ' + datos[arrayNros[nro]+i].titulo_libro + '</h1>'
                 rowcards.appendChild(col);
             }
 

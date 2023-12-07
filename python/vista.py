@@ -15,7 +15,7 @@ crud = Crud(db)
 
 
 #################################################
-###                LIBROS                     ###
+###                CATALOGO                   ###
 #################################################
 @app.route("/catalogo_completo/<string:objeto>/<string:orden>", methods=["GET"])
 def catalogo_completo(objeto, orden):
@@ -37,6 +37,23 @@ def mostrar_libro(id_libro):
 
 
 #################################################
+###                CATALOGO                   ###
+#################################################
+
+@app.route("/libro/<int:id_libro>", methods=["GET"])
+def mostrar_libro_ind(id_libro):
+    libro = crud.ver(
+        "libros",
+        "id_libro",
+        id_libro,
+    )
+    if libro:
+        return jsonify(libro), 201
+    else:
+        return "Libro no encontrado", 404
+
+
+#################################################
 ###                USERS                      ###
 #################################################
 
@@ -45,6 +62,7 @@ def mostrar_libro(id_libro):
 def users():
     user_list = crud.listar("usuarios")
     return jsonify(user_list), 201
+    #agregar le un if para que sino estas logueado te redirija a login
 
 
 @app.route("/users/<int:id_user>", methods=["GET"])
